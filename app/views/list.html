@@ -1,0 +1,31 @@
+<div ng-controller="ListMapController as gmap" class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+                <div class="panel-heading">
+                    Skills: <input type="text" autocomplete="off" name="search"  class="search-form-custom" placeholder="search skills" >
+                </div>
+            <div class="panel-body">
+              Price range (Per hr.):   <rzslider
+                        rz-slider-floor="priceSlider.floor"
+                        rz-slider-ceil="priceSlider.ceil"
+                        rz-slider-model="priceSlider.min"
+                        rz-slider-high="priceSlider.max" /> <br />
+                <div style="background: #f5f5f5;">
+                    <div class="col-md-4" ng-repeat="person in persons">
+                        <img ng-src="{{person.image}}" style="width: 150px; height: 150px;" ng-click=""><br />
+                        {{person.name}}<br />
+                        rating: <rating ng-model="person.rating" max="5" state-on="'fa fa-thumbs-up'" state-off="'fa fa-thumbs-o-up'"></rating>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div ui-map="gmap.myMap1" ui-options="gmap.mapOptions1" class="gmap"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

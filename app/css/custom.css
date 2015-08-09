@@ -1,0 +1,12 @@
+.search-form-custom {
+    width: 249px;
+    padding: 4px 4px 4px 30px;
+    line-height: 21px;
+    height: 21px;
+}
+.empty-star {
+    background-image: url("../img/empty-star.png");
+}
+.full-star {
+    background-image: url("../img/star-filled.png");
+}
